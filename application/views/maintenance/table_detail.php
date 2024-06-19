@@ -30,11 +30,17 @@
     </div>
     <div class="col-md-4">
         <div class="card">
-            <img class="card-img-top img-fluid" src="<?= base_url() ?>uploads/<?= $photo->file_name ?>" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text mb-2">Keterangan gambar : </p>
-                <p class="card-text"><strong><?= $photo->img_ket ?>.</strong></p>
-            </div>
+            <?php
+            if (!is_null($photo)) {
+            ?>
+                <img class="card-img-top img-fluid" src="<?= base_url() ?>uploads/<?= $photo->file_name ?>" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text mb-2">Keterangan gambar : </p>
+                    <p class="card-text"><strong><?= $photo->img_ket ?>.</strong></p>
+                </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </div>
