@@ -36,6 +36,10 @@ if ($host == "laracv.com") {
     $protocol = "https://";
 }
 
+if ($host == "yusen-id.com") {
+    $protocol = "https://";
+}
+
 $config['base_url'] = $protocol . $_SERVER['HTTP_HOST'] . "/piaggio";
 // print_r($config['base_url']);
 // die;
