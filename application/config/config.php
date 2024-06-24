@@ -36,6 +36,10 @@ if ($host == "laracv.com") {
     $protocol = "https://";
 }
 
+if ($host == "www.yusen-id.com") {
+    $protocol = "https://";
+}
+
 if ($host == "yusen-id.com") {
     $protocol = "https://";
 }
