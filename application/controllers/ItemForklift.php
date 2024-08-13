@@ -63,10 +63,6 @@ class ItemForklift extends CI_Controller
             'updated_at' => currentDateTime(),
             'updated_by' => userId()
         );
-
-        // var_dump($id);
-        // var_dump($params);
-        // die;
         $this->item_forklift_m->editForklift($id, $params);
         if ($this->db->affected_rows() > 0) {
             $response = array(

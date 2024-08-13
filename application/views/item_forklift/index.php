@@ -144,7 +144,7 @@
                     type: 'POST',
                     data: formUser,
                     processData: false,
-                    contentType: false, 
+                    contentType: false,
                     success: function(response) {
                         if (response.success == true) {
                             Swal.fire({
@@ -177,7 +177,7 @@
             $('#modalForm').modal('show');
         })
 
-        $('.btnEdit').on('click', function() {
+        $('#user-table').on('click', '.btnEdit', function() {
             $('#headerForm').text('Edit ekspedisi');
             $('#form_proses').val('edit');
             $('#id').val($(this).data('id'));
@@ -186,8 +186,10 @@
             $('#modalForm').modal('show');
         })
 
-        $('.btnDelete').on('click', function() {
+        $('#user-table').on('click', '.btnDelete', function() {
             let id = $(this).data('id');
+
+
             $.post('deleteForklift', {
                 id: id
             }, function(response) {
